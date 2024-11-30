@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha Nota Fiscal MEI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="w-full max-w-md p-4">
+        <div class="bg-gray-100">
+            <h1 class="text-2xl font-bold text-gray-900">Planilha</h1>
+            <h2 class="text-2xl font-bold text-orange-600">CTN - Nota Fiscal MEI</h2>
+            <p class="text-gray-600 mt-2">Invista apenas <span class="font-bold text-gray-900">R$ 14,90</span> para garantir sua segurança fiscal e evitar dores de cabeça!</p>
+        </div>
+        <div class="mt-4 space-y-4">
+            <div class="bg-white p-4 rounded-lg border border-gray-300">
+                <h3 class="text-lg font-bold text-gray-900">Benefícios</h3>
+                <p class="text-gray-600 mt-1">Evite multas e problemas com a Receita Federal. Nossa planilha assegura que você use o código de tributação correto para o seu CNAE.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-gray-300">
+                <h3 class="text-lg font-bold text-gray-900">Segurança</h3>
+                <p class="text-gray-600 mt-1">Produto aprovado por mais de 10 mil MEIs prestadores de serviço em todo o Brasil!</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-gray-300">
+                <h3 class="text-lg font-bold text-gray-900">Entrega</h3>
+                <p class="text-gray-600 mt-1">Receba sua planilha via WhatsApp logo após o pagamento!</p>
+            </div>
+        </div>
+        <div class="mt-6">
+            <button id="payButton" class="w-full bg-orange-600 text-white py-3 rounded-lg text-lg font-bold">EU QUERO A PLANILHA</button>
+        </div>
+    </div>
+</body>
+
+<script>
+   
+    // Nova forma de pagar
+    document.getElementById('payButton').addEventListener('click', function() {
+    var total = 14.90;
+    
+    // Constrói a URL de checkout corretamente
+    var checkoutUrl = "https://connectstore.github.io/checkout?payment=" + total + "&product=Planilha%20Nota%20Fiscal%20MEI" + "&price=" + total;
+    window.location.href = checkoutUrl;
+});
+</script>
+
+</body>
+</html>
+</html>
